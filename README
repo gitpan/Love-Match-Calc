@@ -1,0 +1,31 @@
+NAME
+
+    Love::Match::Calc - Calculate the love factor between two names
+
+SYNOPSIS
+
+	use Love::Match::Calc;
+	my $firstname = "Kirk";
+	my $secondname = "Sandy";
+	my $m = lovecalc($firstname,$secondname);# or lovecalc2
+	print "Lovematch for $firstname and $secondname: $m%\n";
+
+DESCRIPTION
+
+Love::Match::Calc - Calculate the love factor between two names
+
+AUTHOR
+
+    Stefan Gipper <stefanos@cpan.org>, http://www.coder-world.de/
+
+COPYRIGHT
+
+	Business::Tax::VAT::Validation::DE is Copyright (c) 2010 Stefan Gipper
+	All rights reserved.
+
+	This program is free software; you can redistribute
+	it and/or modify it under the same terms as Perl itself.
+
+SEE ALSO
+
+    perl(1)
