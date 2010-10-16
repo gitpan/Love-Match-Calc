@@ -3,8 +3,8 @@ use strict;
 use warnings;
 use Exporter;
 our @ISA = qw/Exporter/;
-our @EXPORT = qw/lovecalc lovecalc2/;
-our $VERSION = '0.1';
+our @EXPORT = qw/lovecalc lovecalc2 lovematch/;
+our $VERSION = '0.2';
 use Params::Validate qw( :all );
 use Math::Cephes qw(:utils);
 
@@ -91,6 +91,12 @@ sub lovecalc ($$){
 	return $calc[0].$calc[1];
 }
 
+sub lovematch ($$){
+	my $firstname = shift;
+	my $secondname = shift;
+	return sprintf("%.0f",((lovecalc($firstname,$secondname) + lovecalc2($firstname,$secondname))/2));
+}
+
 sub count_chars {
 	my ( $input, $mode ) = validate_pos( @_, STRING,
 	{
@@ -128,7 +134,8 @@ Love::Match::Calc - Calculate the love factor between two names
 	use Love::Match::Calc;
 	my $firstname = "Kirk";
 	my $secondname = "Sandy";
-	my $m = lovecalc($firstname,$secondname);# or lovecalc2
+	#my $m = lovecalc($firstname,$secondname);# or lovecalc2
+	my $m = lovematch($firstname,$secondname);# or lovecalc and lovecalc2
 	print "Lovematch for $firstname and $secondname: $m%\n";
 
 

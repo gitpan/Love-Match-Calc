@@ -7,7 +7,8 @@ SYNOPSIS
 	use Love::Match::Calc;
 	my $firstname = "Kirk";
 	my $secondname = "Sandy";
-	my $m = lovecalc($firstname,$secondname);# or lovecalc2
+	#my $m = lovecalc($firstname,$secondname);# or lovecalc2
+	my $m = lovematch($firstname,$secondname);# or lovecalc and lovecalc2
 	print "Lovematch for $firstname and $secondname: $m%\n";
 
 DESCRIPTION
