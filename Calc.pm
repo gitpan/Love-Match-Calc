@@ -1,19 +1,19 @@
 package Love::Match::Calc;
 use strict;
-use warnings;
+#use warnings;
 use Exporter;
 our @ISA = qw/Exporter/;
 our @EXPORT = qw/lovecalc lovecalc2 lovematch/;
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 use Params::Validate qw( :all );
 use Math::Cephes qw(:utils);
 
 use constant STRING => {
-    type => SCALAR,
+	type => SCALAR,
 };
 use constant INTEGER => {
-    type => SCALAR,
-    regex => qr{^\d+$}
+	type => SCALAR,
+	regex => qr{^\d+$}
 };
 
 sub NUMBER_RANGE ($$) {
@@ -42,9 +42,9 @@ sub lovecalc2 ($$){
 		$s2 += ord($n2[$i])/($i+1);
 	}
 
-	my $m = ($s1+$s2)/(($s1-$s2)+1);
-	$m = substr($m*1000, 2,2);
-	return $m;
+	my $m2 = ($s1+$s2)/(($s1/$s2)+1);
+	my $m3 = substr($m2*1000,2,2);
+	return $m3;
 } 
 
 sub lovecalc ($$){
@@ -145,12 +145,11 @@ Love::Match::Calc - Calculate the love factor between two names
 
 =head1 AUTHOR
 
-    Stefan Gipper <stefanos@cpan.org>, http://www.coder-world.de/
+    -
 
 =head1 COPYRIGHT
 
-	Love::Match::Calc is Copyright (c) 2010 Stefan Gipper
-	All rights reserved.
+	Love::Match::Calc
 
 	This program is free software; you can redistribute
 	it and/or modify it under the same terms as Perl itself.

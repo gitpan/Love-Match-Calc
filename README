@@ -17,12 +17,11 @@ Love::Match::Calc - Calculate the love factor between two names
 
 AUTHOR
 
-    Stefan Gipper <stefanos@cpan.org>, http://www.coder-world.de/
+    -
 
 COPYRIGHT
 
-	Business::Tax::VAT::Validation::DE is Copyright (c) 2010 Stefan Gipper
-	All rights reserved.
+	Love::Match::Calc
 
 	This program is free software; you can redistribute
 	it and/or modify it under the same terms as Perl itself.

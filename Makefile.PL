@@ -7,6 +7,6 @@ WriteMakefile(
     'PREREQ_PM'		=> {Params::Validate => 0.95,Math::Cephes => 0.47},
     ($] >= 5.005 ? (
       ABSTRACT_FROM => 'Calc.pm', 
-      AUTHOR     => 'Stefan Gipper <stefanos@cpan.org>',
+      AUTHOR     => '-',
     ) : ()),
 );
